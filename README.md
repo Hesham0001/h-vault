@@ -25,7 +25,8 @@ H-Vault is a web application that made by Hesham Yasser (H in H-Vault refers to 
 2. Navigate to the project folder
     `cd h-vault`
 3. Make sure there is vault.db and it `.schema` is
-    `CREATE TABLE users (
+    ```
+    CREATE TABLE users (
            id INTEGER PRIMARY KEY AUTOINCREMENT,
            username TEXT NOT NULL UNIQUE,
            hash TEXT NOT NULL,
@@ -39,7 +40,8 @@ H-Vault is a web application that made by Hesham Yasser (H in H-Vault refers to 
             account_username TEXT NOT NULL,
             password_encrypted TEXT NOT NULL,
             FOREIGN KEY(user_id) REFERENCES users(id)
-        );`
+        );
+    ```
 3. Install dependencies
     `pip install -r requirements.txt`
 4. Run the app
