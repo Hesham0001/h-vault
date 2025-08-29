@@ -1,0 +1,200 @@
+{% extends "layout.html" %}
+
+{% block title %}How to Be Safe Online?{% endblock %}
+
+{% block main %}
+<div class="container" style="max-width: 900px; text-align: left;">
+  <!-- Header -->
+  <div class="p-4 rounded-4 mb-4" style="
+      background: linear-gradient(90deg, #2C5364, #203A43, #0F2027);
+      color: #fff;">
+    <h1 class="h3 mb-2">How to Be Safe Online ?</h1>
+    <p class="mb-0 opacity-75">Quick, practical steps to protect your accounts, privacy, and devices.</p>
+  </div>
+
+  <!-- Table of contents -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <strong class="d-block mb-2">On this page</strong>
+      <div class="row g-2">
+        <div class="col-12 col-md-6">
+          <ul class="list-unstyled mb-0">
+            <li><a href="#passwords" class="link-primary">1) Strong Passwords & Manager Basics</a></li>
+            <li><a href="#2fa" class="link-primary">2) Enable Two-Factor Authentication (2FA)</a></li>
+            <li><a href="#phishing" class="link-primary">3) Spot Phishing & Scams</a></li>
+            <li><a href="#devices" class="link-primary">4) Secure Your Devices</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <ul class="list-unstyled mb-0">
+            <li><a href="#privacy" class="link-primary">5) Privacy Controls & Sharing</a></li>
+            <li><a href="#wifi" class="link-primary">6) Safer Browsing & Wi-Fi</a></li>
+            <li><a href="#breaches" class="link-primary">7) Breaches, Backups & Recovery</a></li>
+            <li><a href="#habits" class="link-primary">8) Secure Habits Checklist</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1) Passwords -->
+  <section id="passwords" class="mb-4">
+    <h2 class="h4 mb-3">1) Strong Passwords & Manager Basics</h2>
+    <div class="row g-3">
+      <div class="col-md-7">
+        <ul class="list-group">
+          <li class="list-group-item">Use <strong>unique</strong> passwords for every account. Never reuse the same password.</li>
+          <li class="list-group-item">Aim for <strong>16+ characters</strong> with a mix of letters, numbers, and symbols.</li>
+          <li class="list-group-item">Avoid personal info (names, birthdays, sports teams).</li>
+          <li class="list-group-item">Prefer a <strong>password manager</strong> to generate and store complex passwords.</li>
+          <li class="list-group-item">Use a <strong>strong master password</strong> you can remember (passphrase style).</li>
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <strong class="d-block mb-2">Examples</strong>
+            <div class="small">
+              <div class="mb-2"><span class="badge bg-danger me-2">Weak</span> 123456, password</div>
+              <div class="mb-2"><span class="badge bg-warning text-dark me-2">OK</span> Hesham2009!</div>
+              <div><span class="badge bg-success me-2">Great</span> nF8wL!e3pC#0tZq7R</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) 2FA -->
+  <section id="2fa" class="mb-4">
+    <h2 class="h4 mb-3">2) Enable Two-Factor Authentication (2FA)</h2>
+    <div class="alert alert-info mb-3">
+      Even if your password leaks, 2FA can block attackers by requiring a second proof (code/prompt).
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">Prefer <strong>authenticator apps</strong> or security keys over SMS when possible.</li>
+      <li class="list-group-item">Save your <strong>backup codes</strong> in a safe place.</li>
+      <li class="list-group-item">Turn on login alerts to be notified of suspicious sign-ins.</li>
+    </ul>
+  </section>
+
+  <!-- 3) Phishing -->
+  <section id="phishing" class="mb-4">
+    <h2 class="h4 mb-3">3) Spot Phishing & Scams</h2>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <strong class="d-block mb-2">Red flags</strong>
+            <ul class="mb-0">
+              <li>Urgent tone: “Your account will be deleted today!”</li>
+              <li>Unexpected attachments or login links.</li>
+              <li>Misspellings, strange sender address, or look-alike domains.</li>
+              <li>Requests for passwords, codes, or payment cards.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <strong class="d-block mb-2">What to do</strong>
+            <ul class="mb-0">
+              <li>Don’t click—<strong>visit the site directly</strong> from your bookmarks.</li>
+              <li>Verify with the company via official channels.</li>
+              <li>Use separate email addresses for important accounts.</li>
+              <li>Report phishing to the provider and delete it.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) Devices -->
+  <section id="devices" class="mb-4">
+    <h2 class="h4 mb-3">4) Secure Your Devices</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Keep OS, browser, and apps <strong>up to date</strong> (auto-update on).</li>
+      <li class="list-group-item">Use a <strong>device passcode</strong> or biometric unlock, and <strong>encrypt</strong> your disk if available.</li>
+      <li class="list-group-item">Install apps from <strong>trusted stores</strong> only.</li>
+      <li class="list-group-item">Review app permissions; remove what you don’t use.</li>
+      <li class="list-group-item">Turn on <strong>Find My Device</strong> and remote wipe features.</li>
+    </ul>
+  </section>
+
+  <!-- 5) Privacy -->
+  <section id="privacy" class="mb-4">
+    <h2 class="h4 mb-3">5) Privacy Controls & Sharing</h2>
+    <div class="alert alert-secondary">
+      Share less. Anything public can be copied, scraped, and stored forever.
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">Lock down social profiles; limit who can see personal details.</li>
+      <li class="list-group-item">Think before posting travel plans, addresses, school/work details.</li>
+      <li class="list-group-item">Review ad/privacy settings; opt out of unnecessary tracking.</li>
+      <li class="list-group-item">Use different emails for banking, shopping, and newsletters.</li>
+    </ul>
+  </section>
+
+  <!-- 6) Safer Browsing & Wi-Fi -->
+  <section id="wifi" class="mb-4">
+    <h2 class="h4 mb-3">6) Safer Browsing & Wi-Fi</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Prefer <strong>HTTPS</strong> websites; avoid entering passwords on HTTP pages.</li>
+      <li class="list-group-item">Be careful on public Wi-Fi. Avoid sensitive logins on open networks.</li>
+      <li class="list-group-item">Turn off auto-connect to open networks; forget networks you don’t need.</li>
+      <li class="list-group-item">Use a modern browser with phishing/malware protection enabled.</li>
+    </ul>
+  </section>
+
+  <!-- 7) Breaches & Backups -->
+  <section id="breaches" class="mb-4">
+    <h2 class="h4 mb-3">7) Breaches, Backups & Recovery</h2>
+    <ul class="list-group">
+      <li class="list-group-item">If a site you use is breached: <strong>change the password immediately</strong> and enable 2FA.</li>
+      <li class="list-group-item">Never reuse breached passwords anywhere else.</li>
+      <li class="list-group-item"><strong>Back up</strong> important files.</li>
+      <li class="list-group-item">Store recovery email/phone up to date; keep backup codes safe.</li>
+    </ul>
+  </section>
+
+  <!-- 8) Checklist -->
+  <section id="habits" class="mb-4">
+    <h2 class="h4 mb-3">8) Secure Habits Checklist</h2>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <ul class="list-group small">
+          <li class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Unique password for every site</li>
+          <li class="list-group-item"><input type="checkbox" class="form-check-input me-2"> 2FA enabled where available</li>
+          <li class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Software auto-updates on</li>
+          <li class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Phishing awareness (verify links)</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-group small">
+          <li class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Privacy settings reviewed</li>
+          <li class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Public Wi-Fi caution</li>
+          <li class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Regular backups configured</li>
+          <li class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Recovery options up to date</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Generate Pass -->
+  <div class="text-center mt-4">
+    <!-- Button From Uiverse.io by satyamchaudharydev -->
+    <button class="button-ui d-inline-block" style="margin-top: 40px; margin-bottom: 40px; width: 325px;" onclick="location.href='/generate'">
+    Generate a Strong Password Now !
+    <svg class="icon-ui" viewBox="0 0 24 24" fill="currentColor">
+        <path
+        fill-rule="evenodd"
+        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+        clip-rule="evenodd"
+        ></path>
+    </svg>
+    </button>
+  </div>
+</div>
+{% endblock %}

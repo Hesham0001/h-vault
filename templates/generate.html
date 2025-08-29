@@ -1,0 +1,47 @@
+{% extends "layout.html" %} 
+
+{% block title %} 
+ Generate Password 
+{% endblock %} 
+
+{% block main %}
+<h1 class="text-center" style="font-weight: 900;">Generate Password</h1>
+<div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+  <div class="text-center">
+    <div class="text-center mt-4">
+    <!-- Button From Uiverse.io by satyamchaudharydev -->
+    <button class="button-ui d-inline-block" onclick="generatePassword()" style="color: white; width: 325px; height: 50px; font-size: 18px; font-weight: 600; margin-bottom: 60px;">
+    Generate Password
+    <svg class="icon-ui" viewBox="0 0 24 24" fill="currentColor">
+        <path
+        fill-rule="evenodd"
+        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+        clip-rule="evenodd"
+        ></path>
+      </svg>
+      </button>
+    </div>
+    <div class="mt-4">
+      <input
+        type="text"
+        id="password"
+        class="form-control text-center"
+        style="font-size: 20px; font-weight: 600; width: 340px; margin: auto;"
+        readonly
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+    // Made By me and with using ChatGPT (50%)
+  function generatePassword() {
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+    let password = "";
+    for (let i = 0; i < 16; i++) {
+      password += charset.charAt(Math.floor(Math.random() * charset.length));
+    }
+    document.getElementById("password").value = password;
+ }
+</script>
+{% endblock %}

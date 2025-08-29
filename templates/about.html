@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ About 
+{% endblock %}
+
+{% block main %}
+<div class="container mt-5" style="text-align: left; margin-bottom: 60px;">
+
+  <!-- About H-Vault -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h1 class="card-title">About <strong>H-Vault</strong></h1>
+      <p class="card-text">
+        H-Vault is a web app made by <a href="#about-me" style="text-decoration: none;"><strong>Hehsam Yasser</strong></a> for the <a target="_blank" href="https://pll.harvard.edu/course/cs50-introduction-computer-science">CS50</a> final project. 
+        It is a secure password manager designed to help you store and manage your passwords safely. 
+        It uses strong encryption to protect your passwords.
+      </p>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Features</h3>
+      <ul>
+        <li>🔐 Strong encryption for all stored passwords</li>
+        <li>⚡ Generate strong and random passwords instantly</li>
+        <li>📂 Organize and manage multiple accounts easily</li>
+        <li>🖥️ Simple and user-friendly interface</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Built With -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Built With</h3>
+      <ul>
+        <li>Python (Flask)</li>
+        <li>HTML, CSS</li>
+        <li>Bootstrap 5</li>
+        <li>SQLite Database</li>
+        <li>Cryptography & Werkzeug Security for password hashing</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Features Plans -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Features Plans</span></h3>
+      <p class="card-text">
+        Planned improvements include adding two-factor authentication, 
+        cloud synchronization, and a browser extension for quicker access.
+      </p>
+    </div>
+  </div>
+
+  <!-- About Me -->
+  <div id="about-me" class="card shadow-sm">
+    <div class="card-body">
+      <h3 class="card-title">About Hesham</h3>
+      <p class="card-text">
+        I'm Hesham Yasser, a high school student (2025) from Egypt. I have had a passion for programming and coding since I was young, and this passion has continued to grow. 
+        I really enjoy creating and developing anything related to tech. For now, I am focusing on improving my skills and gaining more experience in cybersecurity. 
+        Feel free to contact me through my social media links below.
+      </p>
+      <p><strong>Email:</strong> heshamyasser2409@gmail.com</p>
+      <h4>Links :</h4>
+      <div class="d-flex align-items-center">
+        <a href="https://www.linkedin.com/in/hesham-yasser0001/" target="_blank" class="btn btn-outline-primary btn-sm me-2">LinkedIn</a>
+        <a href="https://github.com/Hesham0001" target="_blank" class="btn btn-outline-dark btn-sm me-2">GitHub</a>
+        <a href="https://www.instagram.com/not.hesham__" target="_blank" class="btn btn-outline-warning btn-sm me-2">Instagram</a>
+        <a href="https://www.reddit.com/user/Hesham_37/" target="_blank" class="btn btn-outline-danger btn-sm me-2">Reddit</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

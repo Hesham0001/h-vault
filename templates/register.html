@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block title %} Register {% endblock %}
+
+{% block main %}
+<h1 class="mb-4">Register</h1>
+<form action="/register" method="post" onsubmit="return validatePassword()">
+  <!-- Username -->
+  <div class="mb-3">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control"
+      name="username"
+      placeholder="Username"
+      type="text"
+      required
+    />
+  </div>
+
+  <!-- Password -->
+  <div class="mb-3 input-group">
+    <input
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Password"
+      type="password"
+      required
+    />
+    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('password')">
+      <img src="{{ url_for('static', filename='show-eye.png') }}" alt="Toggle Password Visibility" style="max-width: 24px;">
+    </button>
+  </div>
+
+  <!-- Confirm Password -->
+  <div class="mb-3 input-group">
+    <input
+      class="form-control"
+      id="confirmation"
+      name="confirmation"
+      placeholder="Confirm Password"
+      type="password"
+      required
+    />
+    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('confirmation')">
+      <img src="{{ url_for('static', filename='show-eye.png') }}" alt="Toggle Password Visibility" style="max-width: 24px;">
+    </button>
+  </div>
+
+  <!-- Generate Password -->
+  <div class="mb-3">
+    <button type="button" class="btn btn-outline-secondary" onclick="generatePassword()">Generate Strong Password</button>
+  </div>
+
+  <!-- Password Strength Message -->
+  <div id="password-message" class="text-danger mb-3" style="display: none;"></div>
+
+  <!-- Hint (Optional) -->
+  <div class="mb-3 input-group">
+    <input
+      class="form-control"
+      name="hint"
+      placeholder="Password Hint (optional)"
+      type="text"
+    />
+    <button type="button" class="btn btn-outline-secondary" onclick="hintInfo()">
+      <img src="{{ url_for('static', filename='question-mark.png') }}" 
+          alt="Toggle Password Visibility" 
+          style="max-width: 20px;">
+    </button>
+  </div>
+
+  <p style="display: none; padding-bottom: 30px; font-size: 20px;" id="hint-info">Hint is a clue to help you remember your password.</p>
+
+   <!-- Submit -->
+  <div class="text-center mt-4">
+    <!-- Button From Uiverse.io by satyamchaudharydev -->
+    <button type="submit" class="button-ui d-inline-block" style="margin-bottom: 40px; width: 325px;">
+    Register Now
+    <svg class="icon-ui" viewBox="0 0 24 24" fill="currentColor">
+        <path
+        fill-rule="evenodd"
+        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+        clip-rule="evenodd"
+        ></path>
+    </svg>
+    </button>
+  </div>
+</form>
+
+<script>
+  // Toggle password visibility Made By ChatGPT
+  function togglePassword(id) {
+    const input = document.getElementById(id);
+    input.type = input.type === "password" ? "text" : "password";
+  }
+
+  // Made By me and with using ChatGPT (50%)
+  function generatePassword() {
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+    let password = "";
+    for (let i = 0; i < 16; i++) {
+      password += charset.charAt(Math.floor(Math.random() * charset.length));
+    }
+    document.getElementById("password").value = password;
+    document.getElementById("confirmation").value = password;
+    document.getElementById("password-message").style.display = "none";
+  }
+
+  function validatePassword() {
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("password-message");
+
+    const hasUpper = /[A-Z]/.test(password);
+    const hasLower = /[a-z]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
+    const hasSymbol = /[^A-Za-z0-9]/.test(password);
+    const noSpaces = !/\s/.test(password);
+
+    if (password.length < 10 || !hasUpper || !hasLower || !hasNumber || !hasSymbol || !noSpaces) {
+      message.style.display = "block";
+      message.innerText = "❌ Password must be at least 10 characters, include uppercase, lowercase, numbers, symbols, and no spaces.";
+      return false;
+    }
+
+    if (["12345", "password", "qwerty"].includes(password.toLowerCase())) {
+      message.style.display = "block";
+      message.innerText = "❌ This password is too weak, please choose another one.";
+      return false;
+    }
+
+    message.style.display = "none";
+    return true;
+  }
+  
+    function hintInfo(id) {
+    let element = document.getElementById("hint-info");
+    if (element.style.display === "none" || element.style.display === "") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
+</script>
+{% endblock %}

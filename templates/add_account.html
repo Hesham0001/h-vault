@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Add Account
+{% endblock %}
+
+{% block main %}
+    <h1 style="font-weight: bold;">Add New Account</h1>
+    <form action="/add_account" method="post" style="margin-top: 40px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+
+            <label for="platform" style="font-weight: bold; align-self: flex-start;">Platform Name:</label>
+            <input class="form-control" type="text" name="platform" id="platform" placeholder="Enter the platform name (Facebook, Instagram ..)" required>
+
+            <label for="account_username" style="font-weight: bold; align-self: flex-start; margin-top: 10px;">Account Username:</label>
+            <input class="form-control" type="text" name="account_username" id="account_username" placeholder="Enter the account username" required>
+
+            <label for="account_password" style="font-weight: bold; align-self: flex-start; margin-top: 10px;">Account Password:</label>
+            <div class="mb-3 input-group"> 
+                <input class="form-control" type="password" name="account_password" id="account_password" placeholder="Enter the account password" required>
+                <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('account_password')">
+                    <img src="{{ url_for('static', filename='show-eye.png') }}" alt="Toggle Password Visibility" style="max-width: 24px;">
+                </button>
+            </div>
+
+            <button class="btn btn-outline-success" type="submit" style="width: 320px; margin-top: 20px;">Add Account</button>
+        </div>
+    </form>
+        <a href="/" class="btn btn-outline-secondary" style="width: 320px; margin-top: 20px; margin-bottom: 80px;">Back to Home</a>
+    
+        <!-- Toggle Password Visibility Script -->  
+    <script>
+        function togglePassword(id) {
+        const input = document.getElementById(id);
+        input.type = input.type === "password" ? "text" : "password";
+        }
+    </script>
+{% endblock %}
