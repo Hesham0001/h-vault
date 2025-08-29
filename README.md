@@ -19,6 +19,9 @@ H-Vault is a web application that made by Hesham Yasser (H in H-Vault refers to 
 - Responsive and friendly design with Bootstrap 
 - Mobile Friendly UI
 
+## Features Plans
+Planned improvements include adding two-factor authentication, cloud synchronization, and a browser extension for quicker access.
+
 ## Installation
 1. Clone the repository  
    `bash git clone https://github.com/Hesham0001/h-vault.git`
