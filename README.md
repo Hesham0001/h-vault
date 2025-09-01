@@ -27,7 +27,7 @@ Planned improvements include adding two-factor authentication, cloud synchroniza
    `bash git clone https://github.com/Hesham0001/h-vault.git`
 2. Navigate to the project folder
     `cd h-vault`
-3. Make sure there is vault.db and it `.schema` is
+3. Make sure there is vault.db and it's `.schema` is
     ```
     CREATE TABLE users (
            id INTEGER PRIMARY KEY AUTOINCREMENT,
